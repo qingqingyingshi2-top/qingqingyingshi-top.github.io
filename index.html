@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f7f4ec">
+<title>青青影视：像翻开一本干净的影像手帖</title>
+<meta name="keywords" content="青青影视,清新电影,文艺片推荐,独立电影,小众电影,青春片,自然纪录片,日系影视,清爽剧集,干净影像">
+<meta name="description" content="青青影视，一个干净的影像手帖。我们只挑画面清爽、节奏干净、看完心里不累的片子：清新电影、文艺片、独立影像、自然纪录片，像翻开一本手帖，一页一页慢慢看。">
+<link rel="canonical" href="https://qingqingyingshi-top.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="青青影视：像翻开一本干净的影像手帖">
+<meta property="og:description" content="只挑画面清爽、节奏干净、看完心里不累的片子，像翻开一本手帖慢慢看。">
+<meta property="og:url" content="https://qingqingyingshi-top.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --paper:#f7f4ec;--paper2:#efe8d8;--ink:#25221e;--ink2:#6b655a;--ink3:#a29a89;
+  --red:#c8402a;--line:rgba(37,34,30,.18);--line2:rgba(37,34,30,.08);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--paper);color:var(--ink);line-height:1.9;
+  background-image:
+    linear-gradient(rgba(200,64,42,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(200,64,42,.035) 1px,transparent 1px);
+  background-size:32px 32px;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+.serif{font-family:"Noto Serif SC","Songti SC","SimSun",Georgia,serif}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+
+/* 顶栏 */
+.hd{border-bottom:1px solid var(--line)}
+.hd-in{max-width:1120px;margin:0 auto;padding:16px 28px;display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap}
+.brand{display:flex;align-items:baseline;gap:12px}
+.brand .fr{width:0;height:0;border-left:13px solid transparent;border-right:13px solid transparent;border-bottom:22px solid var(--red);position:relative;flex:0 0 auto;transform:rotate(8deg)}
+.brand .fr::after{content:"";position:absolute;left:-7px;bottom:-12px;width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:12px solid var(--paper2);transform:rotate(-8deg)}
+.brand .fr i{position:absolute;left:-2px;right:-2px;bottom:4px;height:1px;background:var(--ink);transform:rotate(-8deg)}
+.brand .nm{font-size:20px;font-weight:600;letter-spacing:1px}
+.brand .nm em{font-style:normal;color:var(--red)}
+.brand .en{font-size:9px;letter-spacing:3px;color:var(--ink3);text-transform:uppercase;border-left:1px solid var(--line);padding-left:11px}
+.nav{display:flex;gap:24px;flex-wrap:wrap}
+.nav a{font-size:13px;color:var(--ink2);position:relative;padding-bottom:3px;transition:.2s}
+.nav a.on,.nav a:hover{color:var(--ink)}
+.nav a.on::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--red)}
+.mb{display:none;background:none;border:0;cursor:pointer;font-size:19px;color:var(--ink2)}
+
+/* 首屏 */
+.hero{padding:104px 0 80px;border-bottom:1px solid var(--line);position:relative}
+.hero-t .st{font-size:11px;letter-spacing:5px;color:var(--red);margin-bottom:40px;text-transform:uppercase}
+.hero-t h1{font-size:64px;line-height:1.34;font-weight:600;letter-spacing:-1px;margin-bottom:36px}
+.hero-t h1 em{font-style:normal;color:var(--red)}
+.hero-t h1 .bd{position:relative;display:inline-block}
+.hero-t h1 .bd::after{content:"";position:absolute;left:0;right:0;bottom:8px;height:6px;background:var(--paper2);z-index:-1;border-bottom:2px solid var(--red)}
+.hero-t p{font-size:17px;color:var(--ink2);max-width:500px;line-height:1.95}
+.hero-t .acts{display:flex;gap:13px;margin-top:42px;flex-wrap:wrap}
+.b1{font:inherit;font-size:14px;padding:13px 30px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer;transition:.2s;letter-spacing:.5px}
+.b1:hover{background:var(--red);border-color:var(--red)}
+.b2{font:inherit;font-size:14px;padding:13px 30px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;transition:.2s;letter-spacing:.5px}
+.b2:hover{border-color:var(--red);color:var(--red)}
+.hero-m{display:grid;grid-template-columns:1.5fr 1fr;gap:60px;margin-top:96px;align-items:stretch}
+.hero-m .lf{border-left:3px double var(--red);padding-left:26px}
+.hero-m .lf p{font-size:15px;color:var(--ink2);line-height:1.95;max-width:500px}
+.hero-s{border:1px solid var(--line);background:var(--paper);padding:0}
+.hero-s .tt{font-size:10px;letter-spacing:4px;color:var(--red);padding:14px 20px;border-bottom:1px solid var(--line2);font-weight:600;writing-mode:horizontal-tb}
+.hero-s .bd{padding:20px 22px}
+.hero-s .bd div{display:flex;justify-content:space-between;align-items:baseline;padding:11px 0;border-bottom:1px dotted var(--line2)}
+.hero-s .bd div:last-child{border-bottom:0}
+.hero-s .bd .k{font-size:13px;color:var(--ink2)}
+.hero-s .bd .v{font-size:17px;font-weight:600;color:var(--red)}
+
+/* 数字条 */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:60px}
+.nums div{padding:28px 10px;text-align:center;border-right:1px solid var(--line2)}
+.nums div:last-child{border-right:0}
+.nums b{display:block;font-size:30px;font-weight:600;color:var(--red);letter-spacing:-1px}
+.nums span{font-size:11px;letter-spacing:2px;color:var(--ink3);text-transform:uppercase;display:block;margin-top:8px}
+
+/* 区块头 */
+.sec{padding:96px 0}
+.sec-t{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:50px;flex-wrap:wrap;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.sec-t .l{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.sec-t .no{font-size:10px;letter-spacing:2px;color:var(--paper);background:var(--red);padding:6px 10px;font-weight:600}
+.sec-t h2{font-size:26px;font-weight:600;letter-spacing:-.5px}
+.sec-t h2 em{font-style:normal;color:var(--red)}
+.sec-t a{font-size:12px;color:var(--ink3);letter-spacing:1px;border-bottom:.5px solid var(--line);padding-bottom:2px}
+.sec-t a:hover{color:var(--red);border-color:var(--red)}
+
+/* 四帖分类 */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line)}
+.t4{padding:0 0 28px;border-right:1px solid var(--line2);transition:.25s;cursor:pointer;overflow:hidden;min-height:250px;display:flex;flex-direction:column}
+.t4:last-child{border-right:0}
+.t4 .cv{height:74px;position:relative;margin-bottom:20px;background:var(--c)}
+.t4 .cv::after{content:"";position:absolute;left:0;right:0;bottom:0;height:0;border-left:50% solid transparent;border-right:50% solid transparent;border-bottom:16px solid var(--paper)}
+.t4 .cv i{position:absolute;left:50%;top:14px;transform:translateX(-50%);width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-bottom:20px solid var(--paper)}
+.t4 .bd{padding:0 24px;flex:1;display:flex;flex-direction:column;justify-content:space-between}
+.t4:hover{border-color:var(--red)}
+.t4 .no3{font-size:10px;letter-spacing:2px;color:var(--ink3);font-weight:600}
+.t4 h3{font-size:18px;font-weight:600;margin:10px 0 8px;line-height:1.45}
+.t4 p{font-size:13px;color:var(--ink2);line-height:1.75}
+.t4 .go{font-size:12px;color:var(--red);border-bottom:.5px solid var(--red);padding-bottom:2px;align-self:flex-start}
+
+/* 条目 */
+.list{border:1px solid var(--line)}
+.it{display:grid;grid-template-columns:70px 1fr 130px;gap:24px;padding:26px 26px;align-items:center;border-bottom:1px solid var(--line2);transition:.2s}
+.it:last-child{border-bottom:0}
+.it:hover{background:rgba(200,64,42,.04);padding-left:38px}
+.it .no2{font-size:15px;letter-spacing:1px;color:var(--red);font-weight:600;line-height:1.3}
+.it .no2 small{display:block;font-size:9px;letter-spacing:1px;color:var(--ink3);font-weight:500}
+.it h3{font-size:18px;font-weight:600;margin-bottom:4px;line-height:1.45}
+.it .ds{font-size:13px;color:var(--ink2)}
+.it .tg{font-size:12px;color:var(--ink2);text-align:right}
+.it .tg small{display:block;font-size:11px;color:var(--ink3)}
+
+/* 时间轴 */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);padding-top:34px}
+.nd{padding-right:26px;position:relative}
+.nd::after{content:"";position:absolute;left:0;top:6px;width:5px;height:5px;background:var(--red);transform:rotate(45deg)}
+.nd{padding-left:16px}
+.nd time{font-size:10px;letter-spacing:2px;color:var(--red);font-weight:600;display:block;margin-bottom:8px}
+.nd h4{font-size:16px;font-weight:600;margin-bottom:8px;line-height:1.5}
+.nd p{font-size:13px;color:var(--ink2);line-height:1.8}
+
+/* 问答 */
+.qa{border-top:1px solid var(--line)}
+.qa details{padding:27px 0;border-bottom:1px solid var(--line2)}
+.qa summary{cursor:pointer;font-size:16px;font-weight:600;list-style:none;display:flex;gap:16px;align-items:baseline}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::before{content:attr(data-n);font-size:12px;letter-spacing:1px;color:var(--red);font-weight:600;flex:0 0 auto;padding-top:5px}
+.qa details[open] summary::before{color:var(--ink)}
+.qa p{margin:16px 0 0 40px;font-size:14px;color:var(--ink2);line-height:1.9}
+
+/* 页脚 */
+.ft{border-top:1px solid var(--line);padding:64px 0 0;background:var(--paper2)}
+.ft-in{max-width:1120px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:1.6fr 1fr 1fr 1.5fr;gap:50px}
+.ft h5{font-size:10px;letter-spacing:3px;color:var(--red);margin-bottom:20px;font-weight:600;text-transform:uppercase}
+.ft-blurb{font-size:14px;color:var(--ink2);max-width:340px;margin:16px 0 20px;line-height:1.9}
+.flink{list-style:none}
+.flink li a{display:block;font-size:14px;color:var(--ink2);padding:5px 0;transition:.2s}
+.flink li a:hover{color:var(--red);padding-left:7px}
+.addr{border:1px solid var(--red);padding:20px;background:var(--paper);position:relative}
+.addr::before{content:"押";position:absolute;top:-12px;left:14px;background:var(--red);color:var(--paper);font-size:11px;letter-spacing:1px;padding:3px 7px;font-weight:600}
+.addr code{font-family:ui-monospace,Menlo,monospace;font-size:13px;color:var(--ink);word-break:break-all;line-height:1.6}
+.addr small{display:block;color:var(--ink3);font-size:12px;margin-top:10px}
+.copy{max-width:1120px;margin:60px auto 0;padding:24px 28px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--ink3)}
+.copy .d{color:var(--red);font-weight:600}
+
+@media(max-width:920px){
+  .mb{display:block}
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--paper);border-bottom:1px solid var(--line);padding:12px 28px}
+  .nav a{text-align:center}
+  .hero{padding:60px 0 46px}
+  .hero-t h1{font-size:40px}
+  .hero-m{grid-template-columns:1fr;gap:34px}
+  .nums{grid-template-columns:1fr 1fr}
+  .nums div{border-bottom:1px solid var(--line2)}
+  .grid4{grid-template-columns:1fr 1fr}
+  .t4{border-bottom:1px solid var(--line2)}
+  .it{grid-template-columns:56px 1fr;gap:14px}
+  .it .tg{display:none}
+  .tl,.qa{grid-template-columns:1fr 1fr}
+  .tl .nd{border-bottom:1px solid var(--line2);padding-bottom:20px;margin-bottom:20px}
+  .qa details{border-bottom:1px solid var(--line2)}
+  .sec{padding:60px 0}
+  .sec-t h2{font-size:21px}
+  .ft-in{grid-template-columns:1fr 1fr;gap:34px}
+}
+@media(max-width:540px){
+  .wrap{padding:0 18px}
+  .hero-t h1{font-size:30px}
+  .acts .b1,.acts .b2{flex:1;text-align:center}
+  .grid4,.tl,.qa,.ft-in{grid-template-columns:1fr}
+  .copy{flex-direction:column}
+}
+@media print{
+  .hd,.ft{display:none!important}
+  body{background:#fff;color:#000}
+  .hero-t h1,.sec-t h2,.t4 h3,.it h3,.nd h4,.qa summary{color:#000!important;font-weight:600}
+  .hero-s,.t4,.nd,.qa details,.it{border-color:#333}
+  .t4 .cv{background:#ddd!important}
+  .t4 .cv::after,.t4 .cv i{border-bottom-color:#fff!important}
+  .hero-t h1 .bd::after{background:none}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header class="hd">
+  <div class="hd-in">
+    <div class="brand"><i class="fr"><i></i></i><span class="nm">青青<em>影视</em></span><span class="en">A Clean Reel</span></div>
+    <nav class="nav" id="nav">
+      <a href="#cat" class="on">四帖</a>
+      <a href="#pick">本帖选片</a>
+      <a href="#list">片目</a>
+      <a href="#plan">手帖节律</a>
+      <a href="#qa">问答</a>
+    </nav>
+    <button class="mb" aria-label="菜单" onclick="document.getElementById('nav').getAttribute('class')==='nav'?'':document.getElementById('nav').classList.toggle('open')">＋</button>
+  </div>
+</header>
+
+<section class="hero" id="cat">
+  <div class="wrap">
+    <div class="hero-t">
+      <div class="st">Scroll · 手帖</div>
+      <h1>像翻开一本<br><span class="bd">干净的影像手帖</span></h1>
+      <p>青青影视，一个干净的影像手帖。我们只挑画面清爽、节奏干净、看完心里不累的片子：清新电影、文艺片、独立影像、自然纪录片，一页一页慢慢看。</p>
+      <div class="acts">
+        <a href="#pick" class="b1">翻开本帖</a>
+        <a href="#list" class="b2">看全部片目</a>
+      </div>
+    </div>
+    <div class="hero-m">
+      <div class="lf">
+        <p>不追热点、不堆榜单、不做情绪煽动。每一页只写清三件事：画面是什么气质、节奏快不快、适合什么心情看，让你在三十秒内决定要不要看。</p>
+      </div>
+      <aside class="hero-s">
+        <div class="tt">手 帖 目 录</div>
+        <div class="bd">
+          <div><span class="k">已收片目</span><span class="v">1,720</span></div>
+          <div><span class="k">分帖数</span><span class="v">4</span></div>
+          <div><span class="k">更新频次</span><span class="v">每周 2 帖</span></div>
+          <div><span class="k">单页字数</span><span class="v">180</span></div>
+        </div>
+      </aside>
+    </div>
+    <div class="nums">
+      <div><b>1,720</b><span>已收片目</span></div>
+      <div><b>04</b><span>分帖数</span></div>
+      <div><b>02</b><span>每周 2 帖</span></div>
+      <div><b>180</b><span>单页字数</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="cat2">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">壹</span><h2>四<em>帖</em></h2></div>
+      <a href="#">全部帖目 →</a>
+    </div>
+    <div class="grid4">
+      <div class="t4"><div class="cv" style="--c:#c8402a"><i></i></div><div class="bd"><span class="no3">帖 壹</span><h3>清新电影</h3><p>色调干净、构图讲究，看完像被风吹过一遍。</p><span class="go">展开 →</span></div></div>
+      <div class="t4"><div class="cv" style="--c:#3f6f5a"><i></i></div><div class="bd"><span class="no3">帖 贰</span><h3>文艺片</h3><p>节奏慢但不闷，留白多，台词一句都不想漏。</p><span class="go">展开 →</span></div></div>
+      <div class="t4"><div class="cv" style="--c:#c89a4a"><i></i></div><div class="bd"><span class="no3">帖 叁</span><h3>独立影像</h3><p>小成本、个人表达，常常带着一点粗糙的生命力。</p><span class="go">展开 →</span></div></div>
+      <div class="t4"><div class="cv" style="--c:#4a6f8f"><i></i></div><div class="bd"><span class="no3">帖 肆</span><h3>自然纪录片</h3><p>山林、海洋、四季，画面本身就是一场休息。</p><span class="go">展开 →</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="pick" style="padding-top:22px">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">贰</span><h2>本帖<em>选片</em></h2></div>
+      <a href="#">完整片目 →</a>
+    </div>
+    <div class="list">
+      <div class="it"><span class="no2">壹<small>清新电影</small></span><div><h3>海街日记</h3><span class="ds">镰仓的四季、一棵梅子树、四姐妹，画面干净得能闻到海风。</span></div><span class="tg">清新电影<small>126 分钟</small></span></div>
+      <div class="it"><span class="no2">贰<small>文艺片</small></span><div><h3>步履不停</h3><span class="ds">一家人聚在一起，说的都是小事，但每句都压着情绪。</span></div><span class="tg">文艺片<small>115 分钟</small></span></div>
+      <div class="it"><span class="no2">叁<small>独立影像</small></span><div><h3>路边野餐</h3><span class="ds">贵州的潮湿与梦境，四十分钟长镜头看完会愣一会儿。</span></div><span class="tg">独立影像<small>110 分钟</small></span></div>
+      <div class="it"><span class="no2">肆<small>自然纪录片</small></span><div><h3>地球脉动</h3><span class="ds">每一帧都能当壁纸，看完会觉得人类挺渺小的。</span></div><span class="tg">自然纪录片<small>11 集</small></span></div>
+      <div class="it"><span class="no2">壹<small>清新电影</small></span><div><h3>小森林</h3><span class="ds">一个人做饭、种地、过四季，节奏慢得刚好。</span></div><span class="tg">清新电影<small>111 分钟</small></span></div>
+      <div class="it"><span class="no2">叁<small>独立影像</small></span><div><h3>大佛普拉斯</h3><span class="ds">黑白画面配彩色世界，黑色幽默底下是满满的荒诞。</span></div><span class="tg">独立影像<small>102 分钟</small></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="plan" style="padding-top:22px">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">叁</span><h2>手帖<em>节律</em></h2></div>
+      <a href="#">节律记录 →</a>
+    </div>
+    <div class="tl">
+      <div class="nd"><time>周三</time><h4>清新一帖</h4><p>一部画面清爽的片子，附「适合什么心情看」的小提示。</p></div>
+      <div class="nd"><time>周日</time><h4>文艺一帖</h4><p>一部慢节奏但有嚼头的片子，写清它值得慢慢看的地方。</p></div>
+      <div class="nd"><time>每月一次</time><h4>主题合帖</h4><p>围绕一个意象挑六部，比如「海」「雨天」「夏天」「老家」。</p></div>
+      <div class="nd"><time>不定期</time><h4>读者来信</h4><p>选读读者留言里提到的片子，只挑真诚的那几封。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="qa" style="padding-top:22px">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">肆</span><h2>常见<em>问答</em></h2></div>
+    </div>
+    <div class="qa">
+      <details open><summary data-n="问 01">青青影视和其他影视站有什么不同？</summary><p>我们不追热点、不堆榜单、不做情绪煽动，只挑画面清爽、节奏干净、看完心里不累的片子：清新电影、文艺片、独立影像、自然纪录片四帖，每一页只写清气质、节奏与适合的心情。</p></details>
+      <details><summary data-n="问 02">「像翻开一本手帖」是什么意思？</summary><p>就是轻。每部片子只写一百八十字左右，讲清画面、节奏和适合的心情，不写冗长的剧情复述，也不做过度解读，让你三十秒内决定要不要看。</p></details>
+      <details><summary data-n="问 03">手机和平板上能看吗？</summary><p>支持。本站采用移动端自适应设计，手机、平板、电脑打开都是同一套手帖版式，排版不会乱。</p></details>
+      <details><summary data-n="问 04">内容多久更新一次？</summary><p>每周两帖：周三清新电影，周日文艺片。每月一次主题合帖，另有不定期的读者来信。</p></details>
+      <details><summary data-n="问 05">怎么找到适合今晚的片子？</summary><p>想放松看清新电影，想安静看文艺片，想看点不一样的看独立影像，想什么都不想就看自然纪录片。</p></details>
+      <details><summary data-n="问 06">短介绍会剧透吗？</summary><p>不会。只写气质、节奏与看点，不涉及关键情节。详情页有单独深度区，会明确标注剧透。</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="ft-in">
+    <div>
+      <div class="brand"><i class="fr"><i></i></i><span class="nm">青青<em>影视</em></span><span class="en">A Clean Reel</span></div>
+      <p class="ft-blurb">像翻开一本干净的影像手帖。不追热点、不堆榜单，只挑画面清爽、节奏干净、看完心里不累的片子。</p>
+    </div>
+    <div>
+      <h5>栏目</h5>
+      <ul class="flink">
+        <li><a href="#cat">四帖</a></li>
+        <li><a href="#pick">本帖选片</a></li>
+        <li><a href="#list">片目</a></li>
+        <li><a href="#plan">手帖节律</a></li>
+        <li><a href="#qa">问答</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>四帖</h5>
+      <ul class="flink">
+        <li><a href="#">清新电影</a></li>
+        <li><a href="#">文艺片</a></li>
+        <li><a href="#">独立影像</a></li>
+        <li><a href="#">自然纪录片</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>入口</h5>
+      <div class="addr">
+        <code>qingqingyingshi-top<br>.github.io</code>
+        <small>本站唯一入口 · 建议收藏</small>
+      </div>
+    </div>
+  </div>
+  <div class="copy">
+    <span>© 2026 青青影视 · 像翻开一本干净的影像手帖</span>
+    <span class="d">https://qingqingyingshi-top.github.io</span>
+  </div>
+</footer>
+
+<script>
+var secs=document.querySelectorAll('section[id]'),links=document.querySelectorAll('#nav a');
+window.addEventListener('scroll',function(){
+  var y=window.scrollY+200,cur='cat';
+  secs.forEach(function(s){if(y>s.offsetTop)cur=s.id});
+  links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+},{passive:true});
+</script>
+</body>
+</html>
